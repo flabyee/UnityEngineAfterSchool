@@ -44,20 +44,18 @@ public class DataManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
-    public BigInteger gold = 1;
+    public BigInteger gold = 0;
+    public int stageLevel = 1;
+    public int killCount = 0;
+    public int attackSpeedLevel = 1;
 
-    public Text goldText;
 
-    public void OnClickButton()
-    {
-        gold *= 11;
-        goldText.text = GetGoldText(gold);
-        Debug.Log(gold);
-    }
+    
 
+    
     void Start()
     {
-        goldText.text = GetGoldText(gold);
+        
     }
 
     public string GetGoldText(BigInteger _gold)
@@ -94,4 +92,18 @@ public class DataManager : MonoBehaviour
 
         return gText;
     }
+
+    public void KillEnemy()
+    {
+        killCount++;
+        gold += 111 * stageLevel * stageLevel;
+
+        if (killCount >= 10)
+        {
+            killCount = 0;
+            stageLevel++;
+        }
+    }
+
+    
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Numerics;
 
-public class GameManager : MonoBehaviour
+public class GameManagerTest : MonoBehaviour
 {
     public BigInteger gold = 1;
 
