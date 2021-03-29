@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Numerics;
 using UnityEngine.UI;
+using System.Numerics; //biginteger 사용하기 위해서
 
 public class DataManager : MonoBehaviour
 {
@@ -49,7 +49,7 @@ public class DataManager : MonoBehaviour
     public int killCount = 0;
     public int attackSpeedLevel = 1;
 
-
+    
     
 
     
@@ -105,5 +105,12 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    
+    public void OnClickUpgradeButton()
+    {
+        if(gold > (100 * attackSpeedLevel) && attackSpeedLevel < 5)
+        {
+            attackSpeedLevel++;
+            gold -= 100 * attackSpeedLevel;
+        }
+    }
 }

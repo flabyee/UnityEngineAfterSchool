@@ -522,8 +522,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 480629634819863613, guid: bd3b841a67ee9de4192930461bf66b9a, type: 3}
   EnemySpawnTime: 1
-  goldText: {fileID: 0}
-  stageText: {fileID: 0}
+  goldText: {fileID: 610448889}
+  stageText: {fileID: 101014850}
 --- !u!4 &1198805115
 Transform:
   m_ObjectHideFlags: 0
@@ -699,7 +699,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1643260040}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 957622469}
+        m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
+        m_MethodName: OnClickUpgradeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1643260040
 MonoBehaviour:
   m_ObjectHideFlags: 0

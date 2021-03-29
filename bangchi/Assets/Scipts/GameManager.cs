@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
     public GameObject Enemy = null;
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        textLoad();
         StartCoroutine(SpawnEnemy());
     }
 
@@ -27,13 +29,14 @@ public class GameManager : MonoBehaviour
         while(true)
         {
             randomY = Random.Range(-4f, 4f);
-            Instantiate(Enemy, new Vector2(10f, randomY), Quaternion.identity);
+            Instantiate(Enemy, new Vector3(10f, randomY, 0), Quaternion.identity);
             yield return new WaitForSeconds(EnemySpawnTime);
         }
     }
 
-    void textLoad()
+    public void textLoad()
     {
-       
+        goldText.text = DataManager.Instance.GetGoldText(DataManager.Instance.gold);
+        stageText.text = string.Format("{0}스테이지", DataManager.Instance.stageLevel);
     }
 }

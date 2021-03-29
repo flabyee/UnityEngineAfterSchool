@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    
+    GameManager gameManager = null;
     public float speed = 10f;
     void Start()
     {
-        
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Update()
@@ -23,6 +23,7 @@ public class BulletMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DataManager.Instance.KillEnemy();
+        gameManager.textLoad();
         Destroy(collision.gameObject);
         Destroy(gameObject);
 
