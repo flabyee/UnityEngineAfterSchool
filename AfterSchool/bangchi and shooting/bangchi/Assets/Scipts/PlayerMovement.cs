@@ -19,15 +19,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        attackSpeed = 1f - ((float)(DataManager.Instance.attackSpeedLevel) / 10);
+        attackSpeed = (1f / Mathf.Sqrt(DataManager.Instance.attackSpeedLevel));
         transform.Translate(0, speed * Time.deltaTime, 0);
-        if(transform.position.y > 4.5)
+        if(transform.position.y > 4.5 && (speed > 0))
         {
-            StartCoroutine(turn());
+            speed = -speed;
         }
-        if(transform.position.y < -4.5)
+        if(transform.position.y < -4.5 && (speed < 0))
         {
-            StartCoroutine(turn());
+            speed = -speed;
         }
     }
 
@@ -40,10 +40,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    IEnumerator turn()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        speed *= -1f;
-        yield return new WaitForSeconds(0.1f);
+        if(collision.tag == "Enemy")
+        {
+
+            DataManager.Instance.StageLevelReset();
+        }
     }
 }

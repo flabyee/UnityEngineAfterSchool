@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    GameManager gameManager = null;
     public float speed = 10f;
+
+    GameManager gameManager = null;
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();

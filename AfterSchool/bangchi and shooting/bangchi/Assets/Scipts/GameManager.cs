@@ -11,16 +11,24 @@ public class GameManager : MonoBehaviour
 
     public Text goldText;
     public Text stageText;
+    public Text attackSpeedLevelText;
 
+    public GameObject Player = null;
+
+    private void Awake()
+    {
+        spawnPlayer();
+    }
     void Start()
     {
         textLoad();
         StartCoroutine(SpawnEnemy());
+        
     }
 
     void Update()
     {
-        
+
     }
 
     IEnumerator SpawnEnemy()
@@ -34,9 +42,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     public void textLoad()
     {
         goldText.text = DataManager.Instance.GetGoldText(DataManager.Instance.gold);
         stageText.text = string.Format("{0}스테이지", DataManager.Instance.stageLevel);
+        attackSpeedLevelText.text = (DataManager.Instance.attackSpeedLevel).ToString();
     }
+
+    public void spawnPlayer()
+    {
+        Instantiate(Player, new Vector3(-10, 0, 0), Quaternion.identity);
+    }
+
+    
 }

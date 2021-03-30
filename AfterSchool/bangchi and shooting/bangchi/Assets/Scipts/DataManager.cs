@@ -49,10 +49,6 @@ public class DataManager : MonoBehaviour
     public int killCount = 0;
     public int attackSpeedLevel = 1;
 
-    
-    
-
-    
     void Start()
     {
         
@@ -96,7 +92,7 @@ public class DataManager : MonoBehaviour
     public void KillEnemy()
     {
         killCount++;
-        gold += 111 * stageLevel * stageLevel;
+        gold += stageLevel * stageLevel;
 
         if (killCount >= 10)
         {
@@ -107,10 +103,15 @@ public class DataManager : MonoBehaviour
 
     public void OnClickUpgradeButton()
     {
-        if(gold > (100 * attackSpeedLevel) && attackSpeedLevel < 5)
+        if(gold > (100 * attackSpeedLevel * attackSpeedLevel) && attackSpeedLevel < 100)
         {
             attackSpeedLevel++;
-            gold -= 100 * attackSpeedLevel;
+            gold -= 100 * attackSpeedLevel * attackSpeedLevel;
         }
+    }
+
+    public void StageLevelReset()
+    {
+        stageLevel = 1;
     }
 }
