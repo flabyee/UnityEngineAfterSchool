@@ -7,9 +7,11 @@ public class BulletMovement : MonoBehaviour
     public float speed = 10f;
 
     GameManager gameManager = null;
+
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+
     }
 
     void Update()
@@ -23,10 +25,14 @@ public class BulletMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        DataManager.Instance.KillEnemy();
-        gameManager.textLoad();
-        Destroy(collision.gameObject);
-        Destroy(gameObject);
+        if(collision.tag == "Enemy")
+        {
+            DataManager.Instance.KillEnemy();
+
+
+            gameManager.textLoad();
+            Destroy(gameObject);
+        }
 
     }
 }

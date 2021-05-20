@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private GameManager gameManager = null;
     public GameObject BulletPrefab = null;
 
     public float speed = 5f;
 
-    public float attackSpeed = 100f;
-
+    private void Awake()
+    {
+        
+    }
 
     void Start()
     {
-        StartCoroutine(Shoot());
-        attackSpeed = 1f;
+        gameManager = FindObjectOfType<GameManager>();
+
+        
     }
 
     void Update()
     {
-        attackSpeed = (1f / Mathf.Sqrt(DataManager.Instance.attackSpeedLevel));
+        
         transform.Translate(0, speed * Time.deltaTime, 0);
         if(transform.position.y > 4.5 && (speed > 0))
         {
@@ -31,21 +35,5 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    IEnumerator Shoot()
-    {
-        while(true)
-        {
-            Instantiate(BulletPrefab, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(attackSpeed);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Enemy")
-        {
-
-            DataManager.Instance.StageLevelReset();
-        }
-    }
+    
 }

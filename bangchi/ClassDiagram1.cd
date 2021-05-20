@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Comment CommentText="제이슨에 저장할 정보&#xD;&#xA;">
+    <Position X="0.5" Y="8.358" Height="0.291" Width="1.7" />
+  </Comment>
+  <Comment CommentText="GameManager에 있는 enemys list의 첫번째에 접근해서 OnDamage">
+    <Position X="9.77" Y="2.833" Height="1.041" Width="2.416" />
+  </Comment>
+  <Comment CommentText="KillEnemy : 돈 증가 및 10마리 잡으면 스테이지 레벨업&#xD;&#xA;ClickPowerLevelUp : 클릭커 데미지 갱신 및 돈이 있다면 돈이 줄어들고 클릭커 레벨업&#xD;&#xA;&#xD;&#xA;Save 및 Load : PlayerData형식으로 제이슨에 저장 및 불러오기">
+    <Position X="0.517" Y="5.025" Height="1.587" Width="2.757" />
+  </Comment>
+  <Comment CommentText="TextLoad : DataManager에서 정보가져와서 텍스트 갱신(10라운드에 2-0으로 표기되는 버그)&#xD;&#xA;SpawnEnemy : 적 생성 및 enemy리스트에 추가, 보스라운드면 보스 생성(버그 있음)&#xD;&#xA;OnClickLevelUp : 버튼과  연동해서 DataManager의 ClickPowerLevelUp 실행">
+    <Position X="3.509" Y="4.775" Height="1.383" Width="3.29" />
+  </Comment>
+  <Comment CommentText="시작할때 체력 설정&#xD;&#xA;Update : 왼쪽 이동 및 체력바 이동&#xD;&#xA;OnDamage :  데미지와 체력을 비교해 체력을 깍고 체력바 갱신하거나 삭제(체력바 및 리스트)">
+    <Position X="7.042" Y="4.809" Height="1.324" Width="2.541" />
+  </Comment>
+  <Comment CommentText="구현못함&#xD;&#xA;클릭커에 닿을시 초기화&#xD;&#xA;동료">
+    <Position X="5.452" Y="7.708" Height="0.75" Width="1.683" />
+  </Comment>
+  <Class Name="BulletMovement" Collapsed="true">
+    <Position X="15.25" Y="2" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAACAAAAAAAAAAAAAAAEAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scipts\BulletMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clicker">
+    <Position X="9.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scipts\Clicker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataManager">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAARAAACoQAAAAAAIABAAQAAFAAABAUAAAAAAIAEA=</HashCode>
+      <FileName>Assets\Scipts\DataManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyMovement">
+    <Position X="7" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EEQACAAAAiAAQABAAAAAABACAAAAAQAAAQBACAAAAEA=</HashCode>
+      <FileName>Assets\Scipts\EnemyMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameData" Collapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scipts\GameData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="3.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQBAgAAATAACAAAAAAgAAAAAAAAADABAAAAAAARAEI=</HashCode>
+      <FileName>Assets\Scipts\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerData">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAEAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scipts\DataManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMovement" Collapsed="true">
+    <Position X="15.25" Y="1.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAACAAAEA=</HashCode>
+      <FileName>Assets\Scipts\PlayerMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
