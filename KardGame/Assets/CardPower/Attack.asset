@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ab2cf2d29c5a14c9ece3ff287ba179, type: 3}
+  m_Name: Attack
+  m_EditorClassIdentifier: 
+  illust: {fileID: 21300000, guid: f662011079fd0294b8699d48834c788a, type: 3}
+  cardName: attack
+  cardDescription: "@\uC758 \uB370\uBBF8\uC9C0\uB85C @\uD68C \uACF5\uACA9\uD569\uB2C8\uB2E4"
+  seqOnUes: Attack/1/2
+  seqOnDraw: 
+  seqOnDrop: 
+  seqTurnEnd: 

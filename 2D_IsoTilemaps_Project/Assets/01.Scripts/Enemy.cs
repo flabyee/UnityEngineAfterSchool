@@ -34,7 +34,14 @@ public class Enemy : MonoBehaviour
     public int hp;
     public int power;
 
-    private static Vector3 N = Vector3.up;private static Vector3 NW = (Vector3.up + Vector3.left).normalized;private static Vector3 W = Vector3.left;private static Vector3 SW = (Vector3.down + Vector3.left).normalized;private static Vector3 S = Vector3.down;private static Vector3 SE = (Vector3.down + Vector3.right).normalized;private static Vector3 E = Vector3.right;private static Vector3 NE = (Vector3.up + Vector3.right).normalized;
+    private static Vector3 N = Vector3.up;
+    private static Vector3 NW = (Vector3.up + Vector3.left).normalized;
+    private static Vector3 W = Vector3.left;
+    private static Vector3 SW = (Vector3.down + Vector3.left).normalized;
+    private static Vector3 S = Vector3.down;
+    private static Vector3 SE = (Vector3.down + Vector3.right).normalized;
+    private static Vector3 E = Vector3.right;
+    private static Vector3 NE = (Vector3.up + Vector3.right).normalized;
     private Vector3[] dirs = { N, NW, W, SW, S, SE, E, NE };
     private float[] degrees = { 180, 225, 270, 315, 360, 0, 45, 90, 135 };
 
