@@ -11,7 +11,7 @@ public class Card : ScriptableObject
 
     public CardPower power;
 
-    public void Init(string id, string tagString, CardPower defaultCP, bool dispose = false, bool usable = true)
+    public void Init(string id, string tagString, CardPower defaultCP, bool dispose = false, bool usable = true) 
     {
         this.id = id;
         this.tagString = tagString;

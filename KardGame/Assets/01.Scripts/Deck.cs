@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewDeck", menuName = "AfterSchool/CardGame/Deck")]
 public class Deck : ScriptableObject
 {
-    public List<Card> deck;
+    public List<Card> deck; 
 
     public void Init()
     {

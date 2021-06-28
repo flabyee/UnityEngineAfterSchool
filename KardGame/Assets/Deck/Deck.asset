@@ -14,3 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deck:
   - {fileID: 11400000, guid: df1936779b4daf44d8b56218898f546c, type: 2}
+  - {fileID: 11400000, guid: df1936779b4daf44d8b56218898f546c, type: 2}
+  - {fileID: 11400000, guid: df1936779b4daf44d8b56218898f546c, type: 2}
+  - {fileID: 11400000, guid: df1936779b4daf44d8b56218898f546c, type: 2}
+  - {fileID: 11400000, guid: df1936779b4daf44d8b56218898f546c, type: 2}
+  - {fileID: 11400000, guid: 664e1ccea3ff66d46817fa62f524025b, type: 2}
+  - {fileID: 11400000, guid: 664e1ccea3ff66d46817fa62f524025b, type: 2}
+  - {fileID: 11400000, guid: 664e1ccea3ff66d46817fa62f524025b, type: 2}
+  - {fileID: 11400000, guid: 664e1ccea3ff66d46817fa62f524025b, type: 2}
+  - {fileID: 11400000, guid: 664e1ccea3ff66d46817fa62f524025b, type: 2}

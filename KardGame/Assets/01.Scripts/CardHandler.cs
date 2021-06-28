@@ -8,47 +8,36 @@ public class CardHandler : MonoBehaviour
     public Image cardIllust;
     public Text cardText;
 
+    public Text atkText;
+    public Text hpText;
+
     public Card card;
 
-    public void Init()
+    public int fieldNum;
+
+    public void Init(Card cardData)
     {
-        cardIllust.sprite = card.power.illust;
+        card = cardData;
+
+        if(card.power.illust != null)
+        {
+            cardIllust.sprite = card.power.illust;
+        }
+
         cardText.text = card.power.cardName;
+
+        atkText.text = card.power.attackPower.ToString();
+        hpText.text = card.power.hp.ToString();
     }
 
-    public void ClickCard()
+    public void SetFieldNum(int num)
     {
-        List<string> strList = new List<string>();
-        string[] str = card.power.seqOnUse.Split('/');
-
-        foreach(var item in str)
-        {
-            strList.Add(item);
-        }
-
-        switch(strList.Count)
-        {
-            case 1:
-                break;
-            case 2:
-                if(strList[0] == "Attack")
-                {
-                    //adskdsfjnkfdsksadmfdslfmlsdfnaksdfkdladsnflsanflas
-                    //dsafkln;ksafsafdsakfaskjldflakfsdf
-                    //dsafkln;ksafsafdsakfaskjldflakfsdf
-                    //dsafkln;ksafsafdsakfaskjldflakfsdf
-                    //dsafkln;ksafsafdsakfaskjldflakfsdf
-                    //dsafkln;ksafsafdsakfaskjldflakfsdf
-                    //dsafkln;ksafsafdsakfaskjldflakfsdf
-                    //dsafkln;ksafsafdsakfaskjldflakfsdf
-                    //dsafkln;ksafsafdsakfaskjldflakfsdf
-                }
-                break;
-            case 3:
-                break;
-        }
-
-        Debug.Log("click");
-        Destroy(this.gameObject);
+        fieldNum = num;
     }
+
+    //public void ClickCard()
+    //{
+    //    Debug.Log("click");
+    //    Destroy(this.gameObject);
+    //}
 }

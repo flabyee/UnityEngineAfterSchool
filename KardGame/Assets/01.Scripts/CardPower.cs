@@ -7,6 +7,9 @@ public class CardPower : ScriptableObject
     public string cardName;
     public string cardDescription;
 
+    public int attackPower;
+    public int hp;
+     
     public string seqOnUse;
     public string seqOnDraw;
     public string seqOnDrop;
