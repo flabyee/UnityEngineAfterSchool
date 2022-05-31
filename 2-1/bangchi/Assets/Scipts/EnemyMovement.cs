@@ -51,6 +51,14 @@ public class EnemyMovement : MonoBehaviour
         {
             bar.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 1f, 0));
         }
+
+        if(transform.position.x < -20f)
+        {
+            DataManager.Instance.enemyCount--;
+            Destroy(bar.gameObject);
+            gameManager.enemys.Remove(this);
+            Destroy(gameObject);
+        }
     }
 
     public void OnDamage()

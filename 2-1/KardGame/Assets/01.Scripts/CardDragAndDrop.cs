@@ -88,27 +88,27 @@ public class CardDragAndDrop : MonoBehaviour
     private void ObjectLiftedFromPlayer1Field1(DropArea area, GameObject gameObject)
     {
         gameObject.transform.SetParent(player1HoverRectParent, true);
-        gameManager.player1CardList[0] = null;
+        gameManager.player1CardList.Remove(gameObject.GetComponent<CardHandler>());
     }
     private void ObjectLiftedFromPlayer1Field2(DropArea area, GameObject gameObject)
     {
         gameObject.transform.SetParent(player1HoverRectParent, true);
-        gameManager.player1CardList[1] = null;
+        gameManager.player1CardList.Remove(gameObject.GetComponent<CardHandler>());
     }
     private void ObjectLiftedFromPlayer1Field3(DropArea area, GameObject gameObject)
     {
         gameObject.transform.SetParent(player1HoverRectParent, true);
-        gameManager.player1CardList[2] = null;
+        gameManager.player1CardList.Remove(gameObject.GetComponent<CardHandler>());
     }
     private void ObjectLiftedFromPlayer1Field4(DropArea area, GameObject gameObject)
     {
         gameObject.transform.SetParent(player1HoverRectParent, true);
-        gameManager.player1CardList[3] = null;
+        gameManager.player1CardList.Remove(gameObject.GetComponent<CardHandler>());
     }
     private void ObjectLiftedFromPlayer1Field5(DropArea area, GameObject gameObject)
     {
         gameObject.transform.SetParent(player1HoverRectParent, true);
-        gameManager.player1CardList[4] = null;
+        gameManager.player1CardList.Remove(gameObject.GetComponent<CardHandler>());
     }
 
     private void ObjectDroppedToPlayer1Field1(DropArea area, GameObject gameObject)
@@ -116,7 +116,10 @@ public class CardDragAndDrop : MonoBehaviour
         if(player1FieldRectParent1.childCount == 0)
         {
             gameObject.transform.SetParent(player1FieldRectParent1, true);
-            gameManager.player1CardList[0] = gameObject.GetComponent<CardHandler>().card;
+
+            CardHandler temp = gameObject.GetComponent<CardHandler>();
+            temp.fieldNum = 1;
+            gameManager.player1CardList.Add(temp);
 
             gameObject.GetComponent<DropItem>().IsField();
         }
@@ -132,7 +135,10 @@ public class CardDragAndDrop : MonoBehaviour
         if (player1FieldRectParent2.childCount == 0)
         {
             gameObject.transform.SetParent(player1FieldRectParent2, true);
-            gameManager.player1CardList[1] = gameObject.GetComponent<CardHandler>().card;
+
+            CardHandler temp = gameObject.GetComponent<CardHandler>();
+            temp.fieldNum = 2;
+            gameManager.player1CardList.Add(temp);
 
             gameObject.GetComponent<DropItem>().IsField();
         }
@@ -149,7 +155,10 @@ public class CardDragAndDrop : MonoBehaviour
         if (player1FieldRectParent3.childCount == 0)
         {
             gameObject.transform.SetParent(player1FieldRectParent3, true);
-            gameManager.player1CardList[2] = gameObject.GetComponent<CardHandler>().card;
+
+            CardHandler temp = gameObject.GetComponent<CardHandler>();
+            temp.fieldNum = 3;
+            gameManager.player1CardList.Add(temp);
 
             gameObject.GetComponent<DropItem>().IsField();
         }
@@ -166,7 +175,10 @@ public class CardDragAndDrop : MonoBehaviour
         if (player1FieldRectParent4.childCount == 0)
         {
             gameObject.transform.SetParent(player1FieldRectParent4, true);
-            gameManager.player1CardList[3] = gameObject.GetComponent<CardHandler>().card;
+
+            CardHandler temp = gameObject.GetComponent<CardHandler>();
+            temp.fieldNum = 4;
+            gameManager.player1CardList.Add(temp);
 
             gameObject.GetComponent<DropItem>().IsField();
         }
@@ -183,7 +195,10 @@ public class CardDragAndDrop : MonoBehaviour
         if (player1FieldRectParent5.childCount == 0)
         {
             gameObject.transform.SetParent(player1FieldRectParent5, true);
-            gameManager.player1CardList[4] = gameObject.GetComponent<CardHandler>().card;
+
+            CardHandler temp = gameObject.GetComponent<CardHandler>();
+            temp.fieldNum = 5;
+            gameManager.player1CardList.Add(temp);
 
             gameObject.GetComponent<DropItem>().IsField();
         }
@@ -221,27 +236,27 @@ public class CardDragAndDrop : MonoBehaviour
     private void ObjectLiftedFromPlayer2Field1(DropArea area, GameObject gameObject)
     {
         gameObject.transform.SetParent(player2HoverRectParent, true);
-        gameManager.player2CardList[0] = null;
+        gameManager.player2CardList.Remove(gameObject.GetComponent<CardHandler>());
     }
     private void ObjectLiftedFromPlayer2Field2(DropArea area, GameObject gameObject)
     {
         gameObject.transform.SetParent(player2HoverRectParent, true);
-        gameManager.player2CardList[1] = null;
+        gameManager.player2CardList.Remove(gameObject.GetComponent<CardHandler>());
     }
     private void ObjectLiftedFromPlayer2Field3(DropArea area, GameObject gameObject)
     {
         gameObject.transform.SetParent(player2HoverRectParent, true);
-        gameManager.player2CardList[2] = null;
+        gameManager.player2CardList.Remove(gameObject.GetComponent<CardHandler>());
     }
     private void ObjectLiftedFromPlayer2Field4(DropArea area, GameObject gameObject)
     {
         gameObject.transform.SetParent(player2HoverRectParent, true);
-        gameManager.player2CardList[3] = null;
+        gameManager.player2CardList.Remove(gameObject.GetComponent<CardHandler>());
     }
     private void ObjectLiftedFromPlayer2Field5(DropArea area, GameObject gameObject)
     {
         gameObject.transform.SetParent(player2HoverRectParent, true);
-        gameManager.player2CardList[4] = null;
+        gameManager.player2CardList.Remove(gameObject.GetComponent<CardHandler>());
     }
 
     private void ObjectDroppedToPlayer2Field1(DropArea area, GameObject gameObject)
@@ -249,9 +264,12 @@ public class CardDragAndDrop : MonoBehaviour
         if(player2FieldRectParent1.childCount == 0)
         {
             gameObject.transform.SetParent(player2FieldRectParent1, true);
-            gameManager.player2CardList[0] = gameObject.GetComponent<CardHandler>().card;
 
-                        gameObject.GetComponent<DropItem>().IsField();
+            CardHandler temp = gameObject.GetComponent<CardHandler>();
+            temp.fieldNum = 1;
+            gameManager.player2CardList.Add(temp);
+
+            gameObject.GetComponent<DropItem>().IsField();
         }
         else
         {
@@ -265,7 +283,10 @@ public class CardDragAndDrop : MonoBehaviour
         if (player2FieldRectParent2.childCount == 0)
         {
             gameObject.transform.SetParent(player2FieldRectParent2, true);
-            gameManager.player2CardList[1] = gameObject.GetComponent<CardHandler>().card;
+
+            CardHandler temp = gameObject.GetComponent<CardHandler>();
+            temp.fieldNum = 2;
+            gameManager.player2CardList.Add(temp);
 
             gameObject.GetComponent<DropItem>().IsField();
         }
@@ -282,7 +303,10 @@ public class CardDragAndDrop : MonoBehaviour
         if (player2FieldRectParent3.childCount == 0)
         {
             gameObject.transform.SetParent(player2FieldRectParent3, true);
-            gameManager.player2CardList[2] = gameObject.GetComponent<CardHandler>().card;
+
+            CardHandler temp = gameObject.GetComponent<CardHandler>();
+            temp.fieldNum = 3;
+            gameManager.player2CardList.Add(temp);
 
             gameObject.GetComponent<DropItem>().IsField();
         }
@@ -299,7 +323,10 @@ public class CardDragAndDrop : MonoBehaviour
         if (player2FieldRectParent4.childCount == 0)
         {
             gameObject.transform.SetParent(player2FieldRectParent4, true);
-            gameManager.player2CardList[3] = gameObject.GetComponent<CardHandler>().card;
+
+            CardHandler temp = gameObject.GetComponent<CardHandler>();
+            temp.fieldNum = 4;
+            gameManager.player2CardList.Add(temp);
 
             gameObject.GetComponent<DropItem>().IsField();
         }
@@ -316,7 +343,10 @@ public class CardDragAndDrop : MonoBehaviour
         if (player2FieldRectParent5.childCount == 0)
         {
             gameObject.transform.SetParent(player2FieldRectParent5, true);
-            gameManager.player2CardList[4] = gameObject.GetComponent<CardHandler>().card;
+
+            CardHandler temp = gameObject.GetComponent<CardHandler>();
+            temp.fieldNum = 5;
+            gameManager.player2CardList.Add(temp);
 
             gameObject.GetComponent<DropItem>().IsField();
         }
@@ -347,26 +377,5 @@ public class CardDragAndDrop : MonoBehaviour
         gameObject.transform.SetParent(player2HandleRectParent, true);
 
         gameObject.GetComponent<DropItem>().IsHandle();
-    }
-
-
-
-
-
-    private void SetDropArea(bool active)
-    {
-        player1FieldArea1.gameObject.SetActive(active);
-        player1FieldArea2.gameObject.SetActive(active);
-        player1FieldArea3.gameObject.SetActive(active);
-        player1FieldArea4.gameObject.SetActive(active);
-        player1FieldArea5.gameObject.SetActive(active);
-        player1HandleArea.gameObject.SetActive(active);
-
-        player2FieldArea1.gameObject.SetActive(active);
-        player2FieldArea2.gameObject.SetActive(active);
-        player2FieldArea3.gameObject.SetActive(active);
-        player2FieldArea4.gameObject.SetActive(active);
-        player2FieldArea5.gameObject.SetActive(active);
-        player2HandleArea.gameObject.SetActive(active);
     }
 }

@@ -113,6 +113,7 @@ public class DataManager : MonoBehaviour
     
     public void KillEnemy()
     {
+        enemyCount--;
         killCount++;
         gold += (BigInteger)Mathf.Round(10f * (Mathf.Pow(1.06f, 10f) - Mathf.Pow(1.06f, 10f + stageLevel) / (1f - 1.06f)));
 

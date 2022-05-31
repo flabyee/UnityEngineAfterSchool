@@ -99,6 +99,8 @@ public class DropArea : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnDrop(PointerEventData eventData)
     {
+        Debug.LogError($"{eventData.selectedObject.name}");
+
         GameObject gameObject = eventData.selectedObject;
         if (gameObject == null) return;
 

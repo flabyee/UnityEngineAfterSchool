@@ -930,12 +930,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9caec405085c7244a1cbb9abb80db8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageLevel: 10
+  stageLevel: 1
   enemyCount: 0
   killCount: 0
   power: 0
   bossCount: 0
-  clickPowerLevel: 30
+  clickPowerLevel: 1
   skillLevel: 1
 --- !u!4 &957622470
 Transform:

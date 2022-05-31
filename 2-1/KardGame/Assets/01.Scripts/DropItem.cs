@@ -64,6 +64,7 @@ public class DropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         prevDropArea = droppedArea;
         droppedArea = null;
 
+
         // 드래그 시작할 때 설정?
         Rect clamp = new Rect(Vector2.zero, clampRectTransform.rect.size);
         Vector3 minPosition = clamp.min - rectTransform.rect.min;
